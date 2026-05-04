@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+  --color-primary-950: #172554;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  
+  --border: #e2e8f0;
+  --primary: #1e40af; /* primary-800 */
+  --primary-foreground: #ffffff;
+  
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  
+  --accent: #dbeafe; /* primary-100 */
+  --accent-foreground: #1e40af; /* primary-800 */
+}
+
+/* Deep navy / royal blue dark mode */
+.dark {
+  --background: #020617; /* Slate 950 */
+  --foreground: #f8fafc; /* Slate 50 */
+  
+  --card: #0f172a; /* Slate 900 */
+  --card-foreground: #f8fafc;
+  
+  --border: #1e293b; /* Slate 800 */
+  --primary: #3b82f6; /* primary-500 */
+  --primary-foreground: #ffffff;
+  
+  --muted: #0f172a;
+  --muted-foreground: #94a3b8; /* Slate 400 */
+  
+  --accent: #1e293b; /* Slate 800 */
+  --accent-foreground: #f8fafc;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  /* Segoe Print Regular 400 — primary on Windows; fallbacks elsewhere */
+  --font-sans: "Segoe Print", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", "Segoe UI Mono", monospace;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-synthesis: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hero rotating headline — gradient line motion */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+/* Hide scrollbar for clean look in some components if needed */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
