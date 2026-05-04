@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import { startTransition, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import Image from "next/image";
@@ -29,12 +28,10 @@ const navItems = [
 
 export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [mounted, setMounted] = React.useState(false);
   const pathname = usePathname();
-  const isClient = useSyncExternalStore(
-    () => () => {},
-    () => true,
-    () => false
-  );
+
+  React.useEffect(() => setMounted(true), []);
 
   React.useEffect(() => {
     if (!isOpen) return;
@@ -55,15 +52,13 @@ export function Navbar() {
   }, [isOpen]);
 
   React.useEffect(() => {
-    startTransition(() => {
-      setIsOpen(false);
-    });
+    setIsOpen(false);
   }, [pathname]);
 
   const toggleMenu = () => setIsOpen((o) => !o);
 
   const mobileMenu =
-    isClient &&
+    mounted &&
     createPortal(
       <AnimatePresence>
         {isOpen && (

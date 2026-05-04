@@ -63,20 +63,20 @@ export default function Management() {
       </div>
 
       {/* Hero Section */}
-      <header className="relative z-10 pt-32 pb-20 md:pt-40 md:pb-32 border-b border-border/20">
+      <header className="relative z-10 pt-20 pb-12 md:pt-24 md:pb-16 border-b border-border/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-5 py-2 text-sm font-semibold text-primary mb-8 backdrop-blur-md"
+            className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-5 py-2 text-sm font-semibold text-primary mb-5 backdrop-blur-md"
           >
             <Milestone className="w-4 h-4" />
             <span>Legacy of Leadership</span>
           </motion.div>
           
           <motion.h1
-            className="text-5xl md:text-7xl font-extrabold tracking-tight text-foreground mb-6"
+            className="text-5xl md:text-7xl font-extrabold tracking-tight text-foreground mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -100,7 +100,7 @@ export default function Management() {
       </header>
 
       {/* Leadership Cards Section */}
-      <section className="relative z-10 py-24 md:py-32 bg-muted/20">
+      <section className="relative z-10 py-16 md:py-24 bg-muted/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           
           {/* Animated Connecting Line (Desktop) */}
