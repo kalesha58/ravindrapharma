@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, Send, MessageSquare, Building2, Globe } from "lucide-react";
+import { Phone, Mail, Clock, Send, MessageSquare, Building2, Globe } from "lucide-react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -15,7 +15,7 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } },
+  show: { opacity: 1, y: 0, transition: { type: "spring" as const, stiffness: 300, damping: 24 } },
 };
 
 export default function Contact() {
@@ -23,7 +23,7 @@ export default function Contact() {
     <div className="flex flex-col w-full min-h-screen bg-background overflow-hidden relative">
       
       {/* Immersive Hero Section with Generated Image */}
-      <section className="relative w-full h-[50vh] min-h-[400px] flex items-center justify-center border-b border-border/20">
+      <section className="relative w-full h-[30vh] min-h-[250px] flex items-center justify-center border-b border-border/20">
         <div className="absolute inset-0 w-full h-full">
           <Image
             src="/images/contact-modern.png"
@@ -37,19 +37,19 @@ export default function Contact() {
           <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-blue-600/30 mix-blend-multiply dark:mix-blend-color" />
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center pt-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-5 py-2 text-sm font-semibold text-primary mb-6 backdrop-blur-md"
+            className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-5 py-2 text-sm font-semibold text-primary mb-4 backdrop-blur-md"
           >
             <Globe className="w-4 h-4" />
             <span>24/7 Global Support</span>
           </motion.div>
           
           <motion.h1 
-            className="text-5xl md:text-7xl font-extrabold tracking-tight text-foreground mb-4"
+            className="text-4xl md:text-6xl font-extrabold tracking-tight text-foreground mb-3"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -69,7 +69,7 @@ export default function Contact() {
       </section>
 
       {/* Main Content Layout */}
-      <section className="relative z-10 py-16 md:py-24 bg-muted/20">
+      <section className="relative z-10 py-12 md:py-16 bg-muted/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10">
             

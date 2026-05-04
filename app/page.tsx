@@ -257,7 +257,7 @@ export default function Home() {
       <BrandsMarquee />
 
       {/* Rich "Pillars of Excellence" Features Section - Modern Alternating Layout */}
-      <section className="relative w-full py-32 bg-muted/40 border-t border-border/40 overflow-hidden">
+      <section className="relative w-full py-20 bg-muted/40 border-t border-border/40 overflow-hidden">
         
         {/* Decorative Background */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[400px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent pointer-events-none" />
