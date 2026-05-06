@@ -18,9 +18,9 @@ export default function Home() {
   const [headlineIndex, setHeadlineIndex] = useState(0);
 
   const carouselImages = [
-    "/images/carousel-1.png",
-    "/images/carousel-2.png",
-    "/images/carousel-3.png",
+    "/images/carousel-1-indian.png",
+    "/images/carousel-2-indian.png",
+    "/images/carousel-3-indian.png",
   ];
 
   useEffect(() => {
@@ -73,7 +73,7 @@ export default function Home() {
                 <AnimatePresence mode="wait" initial={false}>
                   <motion.h1
                     key={headlineIndex}
-                    className="text-5xl sm:text-6xl lg:text-[4.5rem] font-extrabold tracking-tight leading-[1.05]"
+                    className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight"
                     initial={{ opacity: 0, y: 36, filter: "blur(10px)" }}
                     animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                     exit={{ opacity: 0, y: -28, filter: "blur(8px)" }}
@@ -217,6 +217,7 @@ export default function Home() {
                       src={carouselImages[currentImageIndex]}
                       alt={`Pharmaceutical industry view ${currentImageIndex + 1}`}
                       fill
+                      sizes="(max-width: 1024px) 100vw, 40vw"
                       className="object-cover"
                       priority={currentImageIndex === 0}
                     />
@@ -256,15 +257,15 @@ export default function Home() {
 
       <BrandsMarquee />
 
-      {/* Rich "Pillars of Excellence" Features Section - Modern Alternating Layout */}
-      <section className="relative w-full py-20 bg-muted/40 border-t border-border/40 overflow-hidden">
+      {/* Premium "Pillars of Excellence" Features Section - Modern Grid Layout (No Images) */}
+      <section className="relative w-full py-24 bg-muted/40 border-t border-border/40 overflow-hidden">
         
         {/* Decorative Background */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[400px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent pointer-events-none" />
 
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="text-center mb-24 max-w-2xl mx-auto">
+          <div className="text-center mb-20 max-w-3xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -274,132 +275,115 @@ export default function Home() {
               <span className="text-primary font-bold tracking-[0.2em] uppercase text-xs sm:text-sm">Our Pillars of Excellence</span>
             </motion.div>
             <motion.h2 
-              className="mt-4 text-4xl md:text-5xl font-extrabold text-foreground"
+              className="mt-4 text-4xl md:text-5xl font-extrabold text-foreground leading-tight"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              Why Partners Choose Us
+              Why Ravindra Pharma Distributors <br className="hidden md:block" />
+              is the Preferred Choice
             </motion.h2>
+            <motion.p
+              className="mt-6 text-lg text-muted-foreground"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              With over five decades of expertise, we have built a reputation for excellence through consistency, reach, and trust.
+            </motion.p>
           </div>
 
-          <div className="flex flex-col gap-24 lg:gap-32">
-            {/* Feature 1 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              <motion.div 
-                className="relative h-[400px] lg:h-[500px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border border-border/50 group"
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.7 }}
-              >
-                <div className="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-500" />
-                <Image src="/images/pillar-legacy.png" alt="52+ Years Legacy" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
-              </motion.div>
-              
-              <motion.div 
-                className="flex flex-col items-start lg:pl-8"
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.7, delay: 0.2 }}
-              >
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mb-8 border border-primary/20 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
-                  <ShieldCheck className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">52+ Years Legacy</h3>
-                <p className="text-muted-foreground leading-relaxed text-lg mb-8">
-                  Three generations of unwavering commitment to healthcare distribution. We've built an enduring foundation of community trust, ensuring that every product we handle meets the highest standards of safety and efficacy.
-                </p>
-                <ul className="space-y-4">
-                  {["Established in 1970", "Family-driven integrity", "Uncompromised quality standards"].map((item, i) => (
-                    <li key={i} className="flex items-center gap-3 text-foreground font-medium">
-                      <CheckCircle2 className="h-5 w-5 text-primary" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Pillar 1: Legacy */}
+            <motion.div 
+              className="group relative p-10 rounded-[3rem] bg-card/60 backdrop-blur-xl border border-border/50 hover:border-primary/30 transition-all duration-500 shadow-xl hover:shadow-[0_20px_50px_-20px_rgba(59,130,246,0.2)] flex flex-col"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-8 border border-primary/20 shadow-[0_0_20px_rgba(59,130,246,0.15)] group-hover:scale-110 transition-transform duration-500">
+                <ShieldCheck className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="text-2xl font-bold mb-5 text-foreground">52+ Years Legacy</h3>
+              <p className="text-muted-foreground leading-relaxed mb-8 flex-1">
+                Three generations of unwavering commitment to healthcare. We've built an enduring foundation of community trust, ensuring safety and efficacy in every product we distribute.
+              </p>
+              <ul className="space-y-4 pt-6 border-t border-border/50">
+                {["Established in 1970", "Family-driven integrity", "Uncompromised quality"].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-sm font-semibold text-foreground/80">
+                    <CheckCircle2 className="h-4 w-4 text-primary" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
 
-            {/* Feature 2 (Reversed) */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              <motion.div 
-                className="flex flex-col items-start lg:pr-8 lg:order-1 order-2"
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.7, delay: 0.2 }}
-              >
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500/20 to-blue-500/5 flex items-center justify-center mb-8 border border-blue-500/20 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
-                  <Truck className="h-8 w-8 text-blue-500" />
-                </div>
-                <h3 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">Robust Distribution Network</h3>
-                <p className="text-muted-foreground leading-relaxed text-lg mb-8">
-                  A powerful, reliable supply chain is the backbone of our operations. We utilize state-of-the-art logistics to ensure highly timely, temperature-controlled delivery to healthcare professionals globally.
-                </p>
-                <ul className="space-y-4">
-                  {["Cold-chain optimized infrastructure", "Real-time delivery tracking", "Nationwide fulfillment centers"].map((item, i) => (
-                    <li key={i} className="flex items-center gap-3 text-foreground font-medium">
-                      <CheckCircle2 className="h-5 w-5 text-blue-500" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
+            {/* Pillar 2: Network */}
+            <motion.div 
+              className="group relative p-10 rounded-[3rem] bg-card/60 backdrop-blur-xl border border-border/50 hover:border-blue-500/30 transition-all duration-500 shadow-xl hover:shadow-[0_20px_50px_-20px_rgba(59,130,246,0.2)] flex flex-col"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <div className="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-8 border border-blue-500/20 shadow-[0_0_20px_rgba(59,130,246,0.15)] group-hover:scale-110 transition-transform duration-500">
+                <Truck className="h-8 w-8 text-blue-500" />
+              </div>
+              <h3 className="text-2xl font-bold mb-5 text-foreground">Robust Network</h3>
+              <p className="text-muted-foreground leading-relaxed mb-8 flex-1">
+                A powerful, reliable supply chain is our backbone. We utilize state-of-the-art logistics to ensure timely, temperature-controlled delivery to healthcare professionals nationwide.
+              </p>
+              <ul className="space-y-4 pt-6 border-t border-border/50">
+                {["Cold-chain optimized", "Real-time tracking", "Nationwide fulfillment"].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-sm font-semibold text-foreground/80">
+                    <CheckCircle2 className="h-4 w-4 text-blue-500" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
 
-              <motion.div 
-                className="relative h-[400px] lg:h-[500px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border border-border/50 group lg:order-2 order-1"
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.7 }}
-              >
-                <div className="absolute inset-0 bg-blue-500/20 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-500" />
-                <Image src="/images/pillar-network.png" alt="Robust Network" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
-              </motion.div>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              <motion.div 
-                className="relative h-[400px] lg:h-[500px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border border-border/50 group"
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.7 }}
-              >
-                <div className="absolute inset-0 bg-indigo-500/20 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-500" />
-                <Image src="/images/pillar-portfolio.png" alt="Elite Portfolio" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
-              </motion.div>
-              
-              <motion.div 
-                className="flex flex-col items-start lg:pl-8"
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.7, delay: 0.2 }}
-              >
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500/20 to-indigo-500/5 flex items-center justify-center mb-8 border border-indigo-500/20 shadow-[0_0_20px_rgba(99,102,241,0.15)]">
-                  <Activity className="h-8 w-8 text-indigo-500" />
-                </div>
-                <h3 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">Elite Medical Portfolio</h3>
-                <p className="text-muted-foreground leading-relaxed text-lg mb-8">
-                  Partnering directly with world-leading pharmaceutical manufacturers, we provide an elite, comprehensive range of solutions covering every therapeutic segment, from critical care to wellness.
-                </p>
-                <ul className="space-y-4">
-                  {["Exclusive manufacturing partnerships", "Multi-specialty therapeutic ranges", "Strict regulatory compliance"].map((item, i) => (
-                    <li key={i} className="flex items-center gap-3 text-foreground font-medium">
-                      <CheckCircle2 className="h-5 w-5 text-indigo-500" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            </div>
-
+            {/* Pillar 3: Portfolio */}
+            <motion.div 
+              className="group relative p-10 rounded-[3rem] bg-card/60 backdrop-blur-xl border border-border/50 hover:border-indigo-500/30 transition-all duration-500 shadow-xl hover:shadow-[0_20px_50px_-20px_rgba(99,102,241,0.2)] flex flex-col"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="w-16 h-16 rounded-2xl bg-indigo-500/10 flex items-center justify-center mb-8 border border-indigo-500/20 shadow-[0_0_20px_rgba(99,102,241,0.15)] group-hover:scale-110 transition-transform duration-500">
+                <Activity className="h-8 w-8 text-indigo-500" />
+              </div>
+              <h3 className="text-2xl font-bold mb-5 text-foreground">Elite Portfolio</h3>
+              <p className="text-muted-foreground leading-relaxed mb-8 flex-1">
+                Partnering directly with world-leading manufacturers, we provide a comprehensive range of solutions covering every therapeutic segment, from critical care to wellness.
+              </p>
+              <ul className="space-y-4 pt-6 border-t border-border/50">
+                {["Direct partnerships", "Multi-specialty range", "Regulatory compliance"].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-sm font-semibold text-foreground/80">
+                    <CheckCircle2 className="h-4 w-4 text-indigo-500" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
           </div>
+
+          {/* Bottom Trust Statement */}
+          <motion.div
+            className="mt-20 p-10 rounded-[2.5rem] bg-primary/5 border border-primary/10 text-center max-w-4xl mx-auto"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-lg md:text-xl font-medium text-foreground">
+              "Our mission is to bridge the gap between world-class pharmaceutical innovation and the patients who need it most, through a distribution network built on <span className="text-primary font-bold">absolute integrity</span>."
+            </p>
+          </motion.div>
         </div>
       </section>
     </div>

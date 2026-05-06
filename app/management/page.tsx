@@ -63,20 +63,20 @@ export default function Management() {
       </div>
 
       {/* Hero Section */}
-      <header className="relative z-10 pt-20 pb-12 md:pt-24 md:pb-16 border-b border-border/20">
+      <header className="relative z-10 pt-16 pb-10 md:pt-20 md:pb-12 border-b border-border/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-5 py-2 text-sm font-semibold text-primary mb-5 backdrop-blur-md"
+            className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-bold text-primary mb-4 backdrop-blur-md"
           >
-            <Milestone className="w-4 h-4" />
-            <span>Legacy of Leadership</span>
+            <Milestone className="w-3.5 h-3.5" />
+            <span className="uppercase tracking-wider">Legacy of Leadership</span>
           </motion.div>
           
           <motion.h1
-            className="text-5xl md:text-7xl font-extrabold tracking-tight text-foreground mb-4"
+            className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground mb-3"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -88,7 +88,7 @@ export default function Management() {
           </motion.h1>
           
           <motion.p
-            className="mx-auto max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed"
+            className="mx-auto max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -100,14 +100,11 @@ export default function Management() {
       </header>
 
       {/* Leadership Cards Section */}
-      <section className="relative z-10 py-16 md:py-24 bg-muted/20">
+      <section className="relative z-10 py-12 md:py-16 bg-[#f1f5f9]/50 dark:bg-muted/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           
-          {/* Animated Connecting Line (Desktop) */}
-          <div className="hidden lg:block absolute left-[10%] right-[10%] top-[35%] h-[2px] bg-gradient-to-r from-transparent via-border/50 to-transparent -z-10" />
-
           <motion.div
-            className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12"
+            className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="show"
@@ -119,39 +116,36 @@ export default function Management() {
                 <motion.article
                   key={leader.name}
                   variants={itemVariants}
-                  className={`group relative flex flex-col rounded-[2.5rem] bg-card/60 backdrop-blur-2xl border border-border/50 overflow-hidden transition-all duration-500 hover:-translate-y-4 ${leader.shadow}`}
+                  className={`group relative flex flex-col rounded-[2rem] bg-white/80 dark:bg-card/60 backdrop-blur-2xl border border-white dark:border-border/50 overflow-hidden transition-all duration-500 hover:-translate-y-2 shadow-sm ${leader.shadow}`}
                 >
                   {/* Glowing Top Border */}
-                  <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${leader.gradient} opacity-80`} />
+                  <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${leader.gradient} opacity-80`} />
                   
-                  {/* Subtle Background Glow */}
-                  <div className={`absolute -inset-24 bg-gradient-to-br ${leader.gradient} opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-500 rounded-full blur-3xl`} />
-
-                  <div className="relative p-8 md:p-10 flex-1 flex flex-col">
+                  <div className="relative p-7 md:p-8 flex-1 flex flex-col">
                     {/* Header: Icon & Tag */}
-                    <div className="flex items-center justify-between mb-10">
-                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${leader.gradient} p-[2px] shadow-lg group-hover:scale-110 transition-transform duration-500`}>
-                        <div className="w-full h-full bg-card rounded-[14px] flex items-center justify-center">
-                          <Icon className="w-7 h-7 text-foreground" />
+                    <div className="flex items-center justify-between mb-6">
+                      <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${leader.gradient} p-[2px] shadow-md group-hover:scale-105 transition-transform duration-500`}>
+                        <div className="w-full h-full bg-white dark:bg-card rounded-[14px] flex items-center justify-center">
+                          <Icon className="w-6 h-6 text-foreground" />
                         </div>
                       </div>
-                      <div className="px-4 py-1.5 rounded-full bg-muted border border-border/50 text-xs font-bold tracking-wider text-muted-foreground uppercase">
+                      <div className="px-3 py-1 rounded-full bg-muted/50 border border-border/40 text-[10px] font-bold tracking-[0.15em] text-muted-foreground uppercase">
                         Gen 0{index + 1}
                       </div>
                     </div>
 
                     {/* Content */}
-                    <h3 className="text-sm font-bold tracking-[0.2em] text-primary uppercase mb-2">
+                    <h3 className="text-[10px] font-bold tracking-[0.2em] text-primary uppercase mb-1">
                       {leader.tag}
                     </h3>
-                    <h2 className="text-3xl font-extrabold text-foreground mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-foreground group-hover:to-muted-foreground transition-all">
+                    <h2 className="text-2xl font-extrabold text-foreground mb-1">
                       {leader.name}
                     </h2>
-                    <p className="text-sm font-semibold text-muted-foreground mb-8 pb-8 border-b border-border/50">
+                    <p className="text-xs font-semibold text-muted-foreground mb-4 pb-4 border-b border-border/10">
                       {leader.role}
                     </p>
 
-                    <p className="text-base text-muted-foreground leading-relaxed flex-1">
+                    <p className="text-sm text-muted-foreground leading-relaxed flex-1">
                       {leader.description}
                     </p>
                   </div>
