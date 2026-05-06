@@ -3,10 +3,40 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { Outfit } from "next/font/google";
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-outfit",
+});
 
 export const metadata: Metadata = {
-  title: "Ravindra Pharma | Reliable Pharmaceutical Distribution",
-  description: "Delivering high-quality healthcare products with consistency, integrity, and 52+ years of experience.",
+  title: "Ravindra Pharma Distributors | Reliable Pharmaceutical Distribution",
+  description: "Delivering high-quality healthcare products with consistency, integrity, and 52+ years of experience in pharmaceutical distribution.",
+  icons: {
+    icon: "/images/logo-rpd.png",
+    apple: "/images/logo-rpd.png",
+  },
+  openGraph: {
+    title: "Ravindra Pharma Distributors",
+    description: "Delivering high-quality healthcare products with 52+ years of experience.",
+    images: [
+      {
+        url: "/images/logo-rpd.png",
+        width: 1200,
+        height: 630,
+        alt: "Ravindra Pharma Distributors Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ravindra Pharma Distributors",
+    description: "Delivering high-quality healthcare products with 52+ years of experience.",
+    images: ["/images/logo-rpd.png"],
+  },
 };
 
 export default function RootLayout({
@@ -15,8 +45,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
-      <body className="min-h-full flex flex-col">
+    <html lang="en" className={`${outfit.variable} h-full antialiased`} suppressHydrationWarning>
+      <body className="min-h-full flex flex-col font-sans">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

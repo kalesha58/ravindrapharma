@@ -74,11 +74,12 @@ export function Footer() {
                     src="/images/logo-rpd.png" 
                     alt="RPD Logo" 
                     fill 
+                    sizes="80px"
                     className="object-contain object-left" 
                   />
                 </div>
                 <span className="text-2xl font-bold tracking-tight text-foreground ml-2">
-                  Ravindra Pharma
+                  Ravindra Pharma Distributors
                 </span>
               </Link>
               <p className="mt-2 inline-flex items-center rounded-full border border-border/60 bg-background/60 px-3 py-1 text-xs font-medium uppercase tracking-widest text-primary/90 dark:border-primary/25 dark:bg-primary/10">

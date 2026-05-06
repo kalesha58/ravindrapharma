@@ -12,7 +12,7 @@ const leaders = [
     icon: Building2,
     gradient: "from-blue-500 to-cyan-400",
     shadow: "group-hover:shadow-[0_0_40px_rgba(59,130,246,0.3)]",
-    description: "Established Ravindra Pharma over 52 years ago with a vision to create a dependable and efficient supply network. Built the foundation of trust and service excellence that defines the company today.",
+    description: "Established Ravindra Pharma Distributors over 52 years ago with a vision to create a dependable and efficient supply network. Built the foundation of trust and service excellence that defines the company today.",
   },
   {
     name: "Nalla Madhu Sudhan",

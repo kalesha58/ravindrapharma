@@ -93,7 +93,7 @@ export function Navbar() {
                   <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">
                     Menu
                   </p>
-                  <p className="text-sm font-semibold text-foreground">Ravindra Pharma</p>
+                  <p className="text-sm font-semibold text-foreground">Ravindra Pharma Distributors</p>
                 </div>
                 <button
                   type="button"
@@ -163,16 +163,17 @@ export function Navbar() {
             <div className="flex items-center">
               <Link href="/" className="flex items-center gap-3">
                 <div className="relative h-16 w-16 transition-all duration-300 dark:brightness-0 dark:invert">
-                  <Image
-                    src="/images/logo-rpd.png"
-                    alt="RPD Logo"
-                    fill
-                    className="object-contain object-left"
-                    priority
-                  />
+                    <Image
+                      src="/images/logo-rpd.png"
+                      alt="RPD Logo"
+                      fill
+                      sizes="64px"
+                      className="object-contain object-left"
+                      priority
+                    />
                 </div>
                 <span className="ml-2 hidden text-xl font-bold tracking-tight text-foreground sm:block">
-                  Ravindra Pharma
+                  Ravindra Pharma Distributors
                 </span>
               </Link>
             </div>

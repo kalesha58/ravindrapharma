@@ -63,8 +63,7 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-  /* Segoe Print Regular 400 — primary on Windows; fallbacks elsewhere */
-  --font-sans: "Segoe Print", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-outfit), "Segoe UI", ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, "Cascadia Code", "Segoe UI Mono", monospace;
 }
 
