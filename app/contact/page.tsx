@@ -20,7 +20,7 @@ const itemVariants = {
 
 export default function Contact() {
   return (
-    <div className="flex flex-col w-full min-h-screen bg-background overflow-hidden relative">
+    <div className="flex flex-col w-full min-h-screen bg-slate-50 dark:bg-slate-950 overflow-hidden relative">
       
       {/* Immersive Hero Section with Generated Image */}
       <section className="relative w-full h-[25vh] min-h-[200px] flex items-center justify-center border-b border-border/10">
@@ -82,14 +82,14 @@ export default function Contact() {
               viewport={{ once: true, margin: "-50px" }}
             >
               {/* Main HQ Card */}
-              <motion.div variants={itemVariants} className="sm:col-span-2 group relative p-6 md:p-8 rounded-[2rem] bg-white/80 dark:bg-card/80 backdrop-blur-xl border border-white dark:border-border/60 hover:border-primary/50 transition-all duration-500 shadow-sm hover:shadow-xl overflow-hidden">
+              <motion.div variants={itemVariants} className="sm:col-span-2 group relative p-6 md:p-8 rounded-[2rem] bg-white/90 dark:bg-slate-900/80 backdrop-blur-xl border border-white dark:border-slate-800/50 hover:border-primary/50 transition-all duration-500 shadow-sm dark:shadow-2xl overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="relative z-10">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mb-4 border border-primary/20 group-hover:scale-105 transition-transform duration-500 shadow-sm">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 dark:from-primary/30 dark:to-primary/10 flex items-center justify-center mb-4 border border-primary/20 group-hover:scale-105 transition-transform duration-500 shadow-sm">
                     <Building2 className="w-5 h-5 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-2">Global Headquarters</h3>
-                  <p className="text-muted-foreground leading-relaxed text-sm">
+                  <p className="text-muted-foreground dark:text-slate-400 leading-relaxed text-sm">
                     123 Pharma Distribution Park<br />
                     Industrial Zone, Phase 1<br />
                     Hyderabad, Telangana 500001
@@ -98,31 +98,31 @@ export default function Contact() {
               </motion.div>
 
               {/* Email Card */}
-              <motion.div variants={itemVariants} className="group relative p-5 rounded-[1.5rem] bg-white/80 dark:bg-card/80 backdrop-blur-xl border border-white dark:border-border/60 hover:border-blue-500/50 transition-all duration-500 shadow-sm hover:shadow-lg">
+              <motion.div variants={itemVariants} className="group relative p-5 rounded-[1.5rem] bg-white/90 dark:bg-slate-900/80 backdrop-blur-xl border border-white dark:border-slate-800/50 hover:border-blue-500/50 transition-all duration-500 shadow-sm hover:shadow-lg">
                 <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 to-blue-500/5 flex items-center justify-center mb-3 border border-blue-500/20 group-hover:scale-105 transition-transform duration-500">
                   <Mail className="w-4 h-4 text-blue-500" />
                 </div>
                 <h3 className="text-sm font-bold text-foreground mb-0.5">Email</h3>
-                <p className="text-xs text-muted-foreground break-all">info@ravindrapharma.com</p>
+                <p className="text-xs text-muted-foreground dark:text-slate-400 break-all">info@ravindrapharma.com</p>
               </motion.div>
 
               {/* Phone Card */}
-              <motion.div variants={itemVariants} className="group relative p-5 rounded-[1.5rem] bg-white/80 dark:bg-card/80 backdrop-blur-xl border border-white dark:border-border/60 hover:border-indigo-500/50 transition-all duration-500 shadow-sm hover:shadow-lg">
+              <motion.div variants={itemVariants} className="group relative p-5 rounded-[1.5rem] bg-white/90 dark:bg-slate-900/80 backdrop-blur-xl border border-white dark:border-slate-800/50 hover:border-indigo-500/50 transition-all duration-500 shadow-sm hover:shadow-lg">
                 <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-500/20 to-indigo-500/5 flex items-center justify-center mb-3 border border-indigo-500/20 group-hover:scale-105 transition-transform duration-500">
                   <Phone className="w-4 h-4 text-indigo-500" />
                 </div>
                 <h3 className="text-sm font-bold text-foreground mb-0.5">Call Us</h3>
-                <p className="text-xs text-muted-foreground">+91 123 456 7890</p>
+                <p className="text-xs text-muted-foreground dark:text-slate-400">+91 123 456 7890</p>
               </motion.div>
 
               {/* Hours Card */}
-              <motion.div variants={itemVariants} className="sm:col-span-2 group relative p-5 rounded-[1.5rem] bg-white/80 dark:bg-card/80 backdrop-blur-xl border border-white dark:border-border/60 hover:border-emerald-500/50 transition-all duration-500 shadow-sm flex flex-row items-center gap-4">
+              <motion.div variants={itemVariants} className="sm:col-span-2 group relative p-5 rounded-[1.5rem] bg-white/90 dark:bg-slate-900/80 backdrop-blur-xl border border-white dark:border-slate-800/50 hover:border-emerald-500/50 transition-all duration-500 shadow-sm flex flex-row items-center gap-4">
                 <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 flex items-center justify-center border border-emerald-500/20 shrink-0 group-hover:scale-105 transition-transform duration-500">
                   <Clock className="w-4 h-4 text-emerald-500" />
                 </div>
                 <div>
                   <h3 className="text-sm font-bold text-foreground mb-0.5">Business Hours</h3>
-                  <p className="text-xs text-muted-foreground">Mon - Sat <span className="mx-1 opacity-50">•</span> 9:00 AM - 6:00 PM IST</p>
+                  <p className="text-xs text-muted-foreground dark:text-slate-400">Mon - Sat <span className="mx-1 opacity-50">•</span> 9:00 AM - 6:00 PM IST</p>
                 </div>
               </motion.div>
             </motion.div>
@@ -138,70 +138,70 @@ export default function Contact() {
               {/* Form Glow Underlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-indigo-500/10 blur-3xl rounded-[3rem] -z-10" />
               
-              <div className="bg-white/90 dark:bg-card/90 backdrop-blur-2xl border border-white dark:border-border/60 shadow-xl rounded-[2rem] p-6 md:p-10 relative overflow-hidden h-full">
+              <div className="bg-white/90 dark:bg-slate-900/90 backdrop-blur-2xl border border-white dark:border-slate-800/60 shadow-xl rounded-[2rem] p-6 md:p-10 relative overflow-hidden h-full">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-blue-500 to-indigo-500" />
                 
                 <div className="mb-8 flex items-center gap-4">
-                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-primary/10 dark:bg-primary/20 rounded-full flex items-center justify-center">
                     <MessageSquare className="w-4 h-4 text-primary" />
                   </div>
                   <div>
                     <h3 className="text-2xl font-extrabold text-foreground tracking-tight">Send a Message</h3>
-                    <p className="text-xs text-muted-foreground mt-0.5">Our team will respond within 24 hours.</p>
+                    <p className="text-xs text-muted-foreground dark:text-slate-400 mt-0.5">Our team will respond within 24 hours.</p>
                   </div>
                 </div>
                 
-                <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2 group">
-                      <label htmlFor="name" className="text-xs font-bold uppercase tracking-wider text-muted-foreground group-focus-within:text-primary transition-colors">Full Name</label>
+                <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div className="space-y-1.5 group">
+                      <label htmlFor="name" className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground dark:text-slate-400 group-focus-within:text-primary transition-colors">Full Name</label>
                       <input 
                         type="text" 
                         id="name" 
-                        className="w-full h-14 rounded-xl border border-border/60 bg-background/50 px-4 py-2 text-[15px] ring-offset-background placeholder:text-muted-foreground/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-primary transition-all duration-300 hover:border-primary/40 hover:bg-background" 
+                        className="w-full h-12 rounded-xl border border-border/60 dark:border-slate-800 bg-background/50 dark:bg-slate-950/50 px-4 py-2 text-sm ring-offset-background placeholder:text-muted-foreground/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-primary transition-all duration-300 hover:border-primary/40 hover:bg-background dark:hover:bg-slate-950" 
                         placeholder="John Doe" 
                         required
                       />
                     </div>
-                    <div className="space-y-2 group">
-                      <label htmlFor="company" className="text-xs font-bold uppercase tracking-wider text-muted-foreground group-focus-within:text-primary transition-colors">Company</label>
+                    <div className="space-y-1.5 group">
+                      <label htmlFor="company" className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground dark:text-slate-400 group-focus-within:text-primary transition-colors">Company</label>
                       <input 
                         type="text" 
                         id="company" 
-                        className="w-full h-14 rounded-xl border border-border/60 bg-background/50 px-4 py-2 text-[15px] ring-offset-background placeholder:text-muted-foreground/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-primary transition-all duration-300 hover:border-primary/40 hover:bg-background" 
+                        className="w-full h-12 rounded-xl border border-border/60 dark:border-slate-800 bg-background/50 dark:bg-slate-950/50 px-4 py-2 text-sm ring-offset-background placeholder:text-muted-foreground/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-primary transition-all duration-300 hover:border-primary/40 hover:bg-background dark:hover:bg-slate-950" 
                         placeholder="Your Organization" 
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2 group">
-                      <label htmlFor="email" className="text-xs font-bold uppercase tracking-wider text-muted-foreground group-focus-within:text-primary transition-colors">Email Address</label>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div className="space-y-1.5 group">
+                      <label htmlFor="email" className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground dark:text-slate-400 group-focus-within:text-primary transition-colors">Email Address</label>
                       <input 
                         type="email" 
                         id="email" 
-                        className="w-full h-14 rounded-xl border border-border/60 bg-background/50 px-4 py-2 text-[15px] ring-offset-background placeholder:text-muted-foreground/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-primary transition-all duration-300 hover:border-primary/40 hover:bg-background" 
+                        className="w-full h-12 rounded-xl border border-border/60 dark:border-slate-800 bg-background/50 dark:bg-slate-950/50 px-4 py-2 text-sm ring-offset-background placeholder:text-muted-foreground/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-primary transition-all duration-300 hover:border-primary/40 hover:bg-background dark:hover:bg-slate-950" 
                         placeholder="john@example.com" 
                         required
                       />
                     </div>
-                    <div className="space-y-2 group">
-                      <label htmlFor="phone" className="text-xs font-bold uppercase tracking-wider text-muted-foreground group-focus-within:text-primary transition-colors">Phone Number</label>
+                    <div className="space-y-1.5 group">
+                      <label htmlFor="phone" className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground dark:text-slate-400 group-focus-within:text-primary transition-colors">Phone Number</label>
                       <input 
                         type="tel" 
                         id="phone" 
-                        className="w-full h-14 rounded-xl border border-border/60 bg-background/50 px-4 py-2 text-[15px] ring-offset-background placeholder:text-muted-foreground/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-primary transition-all duration-300 hover:border-primary/40 hover:bg-background" 
+                        className="w-full h-12 rounded-xl border border-border/60 dark:border-slate-800 bg-background/50 dark:bg-slate-950/50 px-4 py-2 text-sm ring-offset-background placeholder:text-muted-foreground/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-primary transition-all duration-300 hover:border-primary/40 hover:bg-background dark:hover:bg-slate-950" 
                         placeholder="+91 123 456 7890" 
                       />
                     </div>
                   </div>
 
-                  <div className="space-y-2 group">
-                    <label htmlFor="message" className="text-xs font-bold uppercase tracking-wider text-muted-foreground group-focus-within:text-primary transition-colors">Message</label>
+                  <div className="space-y-1.5 group">
+                    <label htmlFor="message" className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground dark:text-slate-400 group-focus-within:text-primary transition-colors">Message</label>
                     <textarea 
                       id="message" 
-                      rows={4}
-                      className="w-full min-h-[140px] rounded-xl border border-border/60 bg-background/50 px-4 py-4 text-[15px] ring-offset-background placeholder:text-muted-foreground/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-primary resize-y transition-all duration-300 hover:border-primary/40 hover:bg-background" 
+                      rows={3}
+                      className="w-full min-h-[100px] rounded-xl border border-border/60 dark:border-slate-800 bg-background/50 dark:bg-slate-950/50 px-4 py-4 text-sm ring-offset-background placeholder:text-muted-foreground/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-primary resize-y transition-all duration-300 hover:border-primary/40 hover:bg-background dark:hover:bg-slate-950" 
                       placeholder="How can we help you?"
                       required
                     />

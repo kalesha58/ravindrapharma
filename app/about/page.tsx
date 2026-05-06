@@ -19,12 +19,12 @@ const staggerContainer = {
 
 export default function About() {
   return (
-    <div className="flex flex-col w-full min-h-screen overflow-hidden bg-[#f8fafc] dark:bg-background">
+    <div className="flex flex-col w-full min-h-screen overflow-hidden bg-slate-50 dark:bg-slate-950">
       
       {/* Ambient Premium Background */}
       <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-[-20%] left-[10%] w-[50vw] h-[50vw] bg-primary/10 rounded-full blur-[150px] animate-[pulse_10s_ease-in-out_infinite] opacity-60 dark:opacity-100" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[60vw] h-[60vw] bg-blue-500/5 rounded-full blur-[120px] animate-[pulse_8s_ease-in-out_infinite_reverse] opacity-60 dark:opacity-100" />
+        <div className="absolute top-[-20%] left-[10%] w-[50vw] h-[50vw] bg-primary/10 rounded-full blur-[150px] animate-[pulse_10s_ease-in-out_infinite] opacity-60 dark:opacity-40" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[60vw] h-[60vw] bg-blue-500/5 rounded-full blur-[120px] animate-[pulse_8s_ease-in-out_infinite_reverse] opacity-60 dark:opacity-30" />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
       </div>
 
@@ -32,10 +32,10 @@ export default function About() {
       <section className="relative z-10 pt-12 pb-10 md:pt-16 md:pb-12 overflow-hidden border-b border-border/10">
         {/* Background Layering */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_-20%,_var(--tw-gradient-stops))] from-primary/10 via-background to-background" />
-          <div className="absolute top-[-10%] right-[-5%] w-[400px] h-[400px] bg-blue-400/10 rounded-full blur-[100px] animate-[pulse_8s_ease-in-out_infinite]" />
-          <div className="absolute bottom-[-10%] left-[-5%] w-[300px] h-[300px] bg-indigo-400/10 rounded-full blur-[80px] animate-[pulse_10s_ease-in-out_infinite_reverse]" />
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_100%,transparent_100%)] opacity-40" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_-20%,_var(--tw-gradient-stops))] from-primary/10 via-background dark:via-slate-950 to-background dark:to-slate-950" />
+          <div className="absolute top-[-10%] right-[-5%] w-[400px] h-[400px] bg-blue-400/10 rounded-full blur-[100px] animate-[pulse_8s_ease-in-out_infinite] dark:opacity-40" />
+          <div className="absolute bottom-[-10%] left-[-5%] w-[300px] h-[300px] bg-indigo-400/10 rounded-full blur-[80px] animate-[pulse_10s_ease-in-out_infinite_reverse] dark:opacity-30" />
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080801a_1px,transparent_1px),linear-gradient(to_bottom,#8080801a_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_100%,transparent_100%)] opacity-40" />
           
           {/* Subtle Floating Blobs */}
           <motion.div 
@@ -89,14 +89,14 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
             {/* Story Main Card */}
             <motion.div 
-              className="lg:col-span-2 group p-8 md:p-10 rounded-[2rem] bg-white/80 dark:bg-card/60 backdrop-blur-xl border border-white dark:border-border/50 hover:border-primary/30 transition-all duration-500 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.05)] dark:shadow-xl relative overflow-hidden"
+              className="lg:col-span-2 group p-8 md:p-10 rounded-[2rem] bg-white/90 dark:bg-slate-900/80 backdrop-blur-xl border border-white dark:border-slate-800/50 hover:border-primary/30 transition-all duration-500 shadow-sm dark:shadow-2xl relative overflow-hidden"
               variants={fadeUp}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
             >
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/60 via-blue-500/40 to-transparent" />
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center mb-6">
                 <History className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Our Foundation</h3>
@@ -124,9 +124,9 @@ export default function About() {
                 <motion.div 
                   key={i}
                   variants={fadeUp}
-                  className="p-5 rounded-[1.25rem] bg-white/60 dark:bg-card/40 border border-white dark:border-border/40 flex items-center gap-4 hover:bg-white dark:hover:bg-card/60 transition-all shadow-sm"
+                  className="p-5 rounded-[1.25rem] bg-white/90 dark:bg-slate-900/60 border border-white dark:border-slate-800/40 flex items-center gap-4 hover:bg-white dark:hover:bg-slate-800/60 transition-all shadow-sm"
                 >
-                  <div className={`w-10 h-10 rounded-lg bg-muted/50 dark:bg-muted/50 flex items-center justify-center ${stat.color}`}>
+                  <div className={`w-10 h-10 rounded-lg bg-muted/50 dark:bg-slate-800 flex items-center justify-center ${stat.color}`}>
                     <stat.icon className="w-5 h-5" />
                   </div>
                   <div>
@@ -143,9 +143,9 @@ export default function About() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
-              className="p-8 rounded-[2rem] bg-white/70 dark:bg-card/60 backdrop-blur-xl border border-white dark:border-border/50 hover:border-indigo-500/30 transition-all duration-500 shadow-sm hover:shadow-xl"
+              className="p-8 rounded-[2rem] bg-white/90 dark:bg-slate-900/80 backdrop-blur-xl border border-white dark:border-slate-800/50 hover:border-indigo-500/30 transition-all duration-500 shadow-sm hover:shadow-xl"
             >
-              <div className="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-5">
+              <div className="w-12 h-12 rounded-xl bg-indigo-500/10 dark:bg-indigo-500/20 flex items-center justify-center mb-5">
                 <Award className="w-6 h-6 text-indigo-500" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">Second Generation</h3>
@@ -159,9 +159,9 @@ export default function About() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
-              className="p-8 rounded-[2rem] bg-white/70 dark:bg-card/60 backdrop-blur-xl border border-white dark:border-border/50 hover:border-cyan-500/30 transition-all duration-500 shadow-sm hover:shadow-xl"
+              className="p-8 rounded-[2rem] bg-white/90 dark:bg-slate-900/80 backdrop-blur-xl border border-white dark:border-slate-800/50 hover:border-cyan-500/30 transition-all duration-500 shadow-sm hover:shadow-xl"
             >
-              <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-5">
+              <div className="w-12 h-12 rounded-xl bg-cyan-500/10 dark:bg-cyan-500/20 flex items-center justify-center mb-5">
                 <TrendingUp className="w-6 h-6 text-cyan-500" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">Modern Future</h3>
@@ -173,7 +173,7 @@ export default function About() {
 
           {/* Bottom Statement */}
           <motion.div 
-            className="w-full max-w-5xl mx-auto text-center bg-white/90 dark:bg-card/50 backdrop-blur-2xl border border-primary/10 dark:border-primary/20 rounded-[2.5rem] p-10 md:p-14 shadow-[0_20px_60px_-20px_rgba(59,130,246,0.12)] relative overflow-hidden"
+            className="w-full max-w-5xl mx-auto text-center bg-white/90 dark:bg-slate-900/90 backdrop-blur-2xl border border-primary/10 dark:border-primary/30 rounded-[2.5rem] p-10 md:p-14 shadow-sm dark:shadow-2xl relative overflow-hidden"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

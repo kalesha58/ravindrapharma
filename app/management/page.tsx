@@ -54,12 +54,13 @@ const itemVariants = {
 
 export default function Management() {
   return (
-    <div className="relative min-h-screen flex flex-col overflow-hidden bg-background">
-      {/* Ultra-Premium Ambient Background */}
+    <div className="flex flex-col w-full min-h-screen bg-slate-50 dark:bg-slate-950 overflow-hidden relative">
+      
+      {/* Immersive Background */}
       <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute -top-[20%] -right-[10%] w-[70vw] h-[70vw] rounded-full bg-primary/5 blur-[150px] animate-[pulse_10s_ease-in-out_infinite]" />
-        <div className="absolute top-[40%] -left-[10%] w-[50vw] h-[50vw] rounded-full bg-blue-500/5 blur-[150px] animate-[pulse_8s_ease-in-out_infinite_reverse]" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+        <div className="absolute top-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-primary/5 rounded-full blur-[120px] dark:opacity-20" />
+        <div className="absolute bottom-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-indigo-500/5 rounded-full blur-[120px] dark:opacity-20" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:32px_32px] dark:opacity-20" />
       </div>
 
       {/* Hero Section */}
@@ -116,7 +117,7 @@ export default function Management() {
                 <motion.article
                   key={leader.name}
                   variants={itemVariants}
-                  className={`group relative flex flex-col rounded-[2rem] bg-white/80 dark:bg-card/60 backdrop-blur-2xl border border-white dark:border-border/50 overflow-hidden transition-all duration-500 hover:-translate-y-2 shadow-sm ${leader.shadow}`}
+                  className={`group relative flex flex-col rounded-[2rem] bg-white/90 dark:bg-slate-900/80 backdrop-blur-2xl border border-white dark:border-slate-800/50 overflow-hidden transition-all duration-500 hover:-translate-y-2 shadow-sm dark:shadow-2xl ${leader.shadow}`}
                 >
                   {/* Glowing Top Border */}
                   <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${leader.gradient} opacity-80`} />
@@ -125,11 +126,11 @@ export default function Management() {
                     {/* Header: Icon & Tag */}
                     <div className="flex items-center justify-between mb-6">
                       <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${leader.gradient} p-[2px] shadow-md group-hover:scale-105 transition-transform duration-500`}>
-                        <div className="w-full h-full bg-white dark:bg-card rounded-[14px] flex items-center justify-center">
+                        <div className="w-full h-full bg-white dark:bg-slate-950 rounded-[14px] flex items-center justify-center">
                           <Icon className="w-6 h-6 text-foreground" />
                         </div>
                       </div>
-                      <div className="px-3 py-1 rounded-full bg-muted/50 border border-border/40 text-[10px] font-bold tracking-[0.15em] text-muted-foreground uppercase">
+                      <div className="px-3 py-1 rounded-full bg-muted/50 dark:bg-slate-800/50 border border-border/40 dark:border-slate-700/50 text-[10px] font-bold tracking-[0.15em] text-muted-foreground dark:text-slate-400 uppercase">
                         Gen 0{index + 1}
                       </div>
                     </div>
@@ -141,11 +142,11 @@ export default function Management() {
                     <h2 className="text-2xl font-extrabold text-foreground mb-1">
                       {leader.name}
                     </h2>
-                    <p className="text-xs font-semibold text-muted-foreground mb-4 pb-4 border-b border-border/10">
+                    <p className="text-xs font-semibold text-muted-foreground dark:text-slate-400 mb-4 pb-4 border-b border-border/10 dark:border-slate-800">
                       {leader.role}
                     </p>
 
-                    <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                    <p className="text-sm text-muted-foreground dark:text-slate-300 leading-relaxed flex-1">
                       {leader.description}
                     </p>
                   </div>
