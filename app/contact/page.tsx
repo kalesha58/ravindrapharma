@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Phone, Mail, Clock, Send, MessageSquare, Building2, Globe } from "lucide-react";
+import { Phone, Mail, Clock, Send, MessageSquare, Building2, Globe, ArrowUpRight } from "lucide-react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -90,10 +90,18 @@ export default function Contact() {
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-2">Global Headquarters</h3>
                   <p className="text-muted-foreground dark:text-slate-400 leading-relaxed text-sm">
-                    123 Pharma Distribution Park<br />
-                    Industrial Zone, Phase 1<br />
-                    Hyderabad, Telangana 500001
+                    5 7 44 5-7-144, KHALLELWADI<br />
+                    Nizamabad, Telangana, 503001 India
                   </p>
+                  <a 
+                    href="https://maps.google.com/?q=5%207%2044%205-7-144,%20KHALLELWADI%20Nizamabad,%20Telangana,%20503001%20India"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline group/map"
+                  >
+                    View on Google Maps
+                    <ArrowUpRight className="w-3 h-3 transition-transform group-hover/map:translate-x-0.5 group-hover/map:-translate-y-0.5" />
+                  </a>
                 </div>
               </motion.div>
 
@@ -103,7 +111,7 @@ export default function Contact() {
                   <Mail className="w-4 h-4 text-blue-500" />
                 </div>
                 <h3 className="text-sm font-bold text-foreground mb-0.5">Email</h3>
-                <p className="text-xs text-muted-foreground dark:text-slate-400 break-all">info@ravindrapharma.com</p>
+                <p className="text-xs text-muted-foreground dark:text-slate-400 break-all">ravindrapharma.nzb1@gmail.com</p>
               </motion.div>
 
               {/* Phone Card */}
@@ -112,7 +120,7 @@ export default function Contact() {
                   <Phone className="w-4 h-4 text-indigo-500" />
                 </div>
                 <h3 className="text-sm font-bold text-foreground mb-0.5">Call Us</h3>
-                <p className="text-xs text-muted-foreground dark:text-slate-400">+91 123 456 7890</p>
+                <p className="text-xs text-muted-foreground dark:text-slate-400">+91 88816 99999 / 88852 99999</p>
               </motion.div>
 
               {/* Hours Card */}
@@ -191,7 +199,7 @@ export default function Contact() {
                         type="tel" 
                         id="phone" 
                         className="w-full h-12 rounded-xl border border-border/60 dark:border-slate-800 bg-background/50 dark:bg-slate-950/50 px-4 py-2 text-sm ring-offset-background placeholder:text-muted-foreground/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-primary transition-all duration-300 hover:border-primary/40 hover:bg-background dark:hover:bg-slate-950" 
-                        placeholder="+91 123 456 7890" 
+                        placeholder="+91 88816 99999" 
                       />
                     </div>
                   </div>

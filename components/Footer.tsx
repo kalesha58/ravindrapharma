@@ -114,12 +114,12 @@ export function Footer() {
                   </Link>
                 ))}
                 <Link
-                  href="mailto:info@ravindrapharma.com"
+                  href="mailto:ravindrapharma.nzb1@gmail.com"
                   className="inline-flex h-10 items-center gap-2 rounded-full border border-border/70 bg-background/80 px-4 text-sm text-muted-foreground shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-primary/5 hover:text-primary dark:border-border/50 dark:bg-card/50"
                 >
                   <Mail className="h-4 w-4 shrink-0" />
                   <span className="sr-only sm:not-sr-only sm:max-w-[10rem] sm:truncate">
-                    info@ravindrapharma.com
+                    ravindrapharma.nzb1@gmail.com
                   </span>
                 </Link>
               </div>
@@ -155,19 +155,24 @@ export function Footer() {
                   <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/15">
                     <MapPin className="h-4 w-4" />
                   </span>
-                  <span className="pt-1 leading-relaxed">
-                    Hyderabad, Telangana, India
-                  </span>
+                  <a 
+                    href="https://maps.google.com/?q=5%207%2044%205-7-144,%20KHALLELWADI%20Nizamabad,%20Telangana,%20503001%20India"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="pt-1 leading-relaxed transition-colors hover:text-primary"
+                  >
+                    5 7 44 5-7-144, KHALLELWADI, Nizamabad, Telangana, 503001 India
+                  </a>
                 </li>
                 <li className="flex gap-3">
                   <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/15">
                     <Phone className="h-4 w-4" />
                   </span>
                   <a
-                    href="tel:+911234567890"
+                    href="tel:+918881699999"
                     className="pt-1 text-foreground/90 transition-colors hover:text-primary"
                   >
-                    +91 (0) 123 456 7890
+                    +91 88816 99999, 88852 99999
                   </a>
                 </li>
                 <li className="flex gap-3">
@@ -175,10 +180,10 @@ export function Footer() {
                     <Mail className="h-4 w-4" />
                   </span>
                   <a
-                    href="mailto:info@ravindrapharma.com"
+                    href="mailto:ravindrapharma.nzb1@gmail.com"
                     className="pt-1 break-all text-foreground/90 transition-colors hover:text-primary"
                   >
-                    info@ravindrapharma.com
+                    ravindrapharma.nzb1@gmail.com
                   </a>
                 </li>
                 <li className="flex gap-3">
