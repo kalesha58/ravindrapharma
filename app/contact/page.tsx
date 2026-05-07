@@ -94,7 +94,7 @@ export default function Contact() {
                     Nizamabad, Telangana, 503001 India
                   </p>
                   <a 
-                    href="https://maps.google.com/?q=5%207%2044%205-7-144,%20KHALLELWADI%20Nizamabad,%20Telangana,%20503001%20India"
+                    href="https://maps.app.goo.gl/5iSZMgrbi9fEbWiy9?g_st=iw"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-4 inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline group/map"

@@ -156,7 +156,7 @@ export function Footer() {
                     <MapPin className="h-4 w-4" />
                   </span>
                   <a 
-                    href="https://maps.google.com/?q=5%207%2044%205-7-144,%20KHALLELWADI%20Nizamabad,%20Telangana,%20503001%20India"
+                    href="https://maps.app.goo.gl/5iSZMgrbi9fEbWiy9?g_st=iw"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="pt-1 leading-relaxed transition-colors hover:text-primary"
