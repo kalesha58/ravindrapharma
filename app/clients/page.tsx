@@ -119,21 +119,21 @@ export default function Clients() {
 const testimonials = [
   {
     content: "Ravindra Pharma Distributors has been our most reliable supply partner for over 15 years. Their consistency in delivering critical care medications is unmatched in the region.",
-    author: "Dr. Arjun Reddy",
-    role: "Medical Director, Apollo Hospitals",
-    initials: "AR"
+    author: "Dr. Karnati Sanjana Shiny",
+    role: "Pulmonologist, Amrutha Lakshmi Hospital",
+    initials: "KS"
   },
   {
     content: "The level of professionalism and the robustness of their distribution network makes them a standout in the Indian pharmaceutical industry. They are truly modern and forward-thinking.",
-    author: "Priya Sharma",
-    role: "Procurement Manager, Global Life Sciences",
-    initials: "PS"
+    author: "Dr. Nalla Teja Sri",
+    role: "Ashirwad Hospital",
+    initials: "NT"
   },
   {
     content: "We trust Ravindra Pharma for their unwavering integrity and quality compliance. They are not just distributors, but a vital partner in our mission to deliver healthcare.",
-    author: "Rajesh Khanna",
-    role: "Healthcare Administrator, City Specialty Clinic",
-    initials: "RK"
+    author: "Dr. Gattu Jaya Prakash",
+    role: "Orthopedic, Amrutha Lakshmi Hospital",
+    initials: "GJ"
   }
 ];
 
